@@ -1,9 +1,9 @@
 import {
   Component,
-  Inject,
   OnInit
 } from '@angular/core';
 import * as _ from 'lodash';
+import { combineLatest } from 'rxjs/operators';
 
 import { ThreadsService } from './../thread/threads.service';
 import { MessagesService } from './../message/messages.service';
@@ -24,12 +24,11 @@ export class ChatNavBarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.messagesService.messages
-      .combineLatest(
+    this.messagesService.messages.pipe(
+      combineLatest(
         this.threadsService.currentThread,
         (messages: Message[], currentThread: Thread) =>
-          [currentThread, messages] )
-
+          [currentThread, messages] ))
       .subscribe(([currentThread, messages]: [Thread, Message[]]) => {
         this.unreadMessagesCount =
           _.reduce(

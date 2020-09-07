@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { UsersService } from './user/users.service';
 import { ThreadsService } from './thread/threads.service';
@@ -30,7 +30,7 @@ import { FromNowPipe } from './pipes/from-now.pipe';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpClientModule
   ],
   providers: [
     MessagesService, ThreadsService, UsersService
