@@ -1,32 +1,37 @@
 <p align="center">
-  <img src="src/assets/images/logos/Angular2RxJSChatHeaderImage.png" alt="Angular 2 RxJS Chat" width="500" height="300"/>
+  <img src="src/assets/images/logos/Angular2RxJSChatHeaderImage.png" alt="Angular RxJS Chat" width="500" height="300"/>
 </p>
 
-# Angular 2 RxJS Chat [![Join the chat at https://gitter.im/ng-book/ng-book](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ng-book/ng-book?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+# Angular RxJS Chat [![Join the chat at https://gitter.im/ng-book/ng-book](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ng-book/ng-book?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-> An Angular 2 chat app using [Angular 2](https://angular.io/), [RxJS](https://github.com/Reactive-Extensions/RxJS), [Angular CLI](https://github.com/angular/angular-cli), [Webpack](https://webpack.github.io/), [TypeScript](http://www.typescriptlang.org/), Services, Injectables, [Karma](http://karma-runner.github.io/), Forms, and [tslint](http://palantir.github.io/tslint/) by the [ng-book 2 team](https://ng-book.com/2)
+> An Angular chat app using [Angular](https://angular.io/), [RxJS](https://github.com/Reactive-Extensions/RxJS), [Angular CLI](https://github.com/angular/angular-cli), [Webpack](https://webpack.github.io/), [TypeScript](http://www.typescriptlang.org/), Services, Injectables, [Karma](http://karma-runner.github.io/), Forms, and [tslint](http://palantir.github.io/tslint/) by the [ng-book 2 team](https://ng-book.com/2)
 
-This repo shows an example chat application using RxJS and Angular 2. The goal is to show how to use the Observables data architecture pattern within Angular 2. It also features:
+This repo shows an example chat application using RxJS and Angular. The goal is to show how to use the Observables data architecture pattern within Angular. It also features:
 
 * Angular CLI, which configures Webpack with TypeScript, Karma, and tslint
 * Writing async components that work with RxJS
-* How to write injectable services in Angular 2
+* How to write injectable services in Angular
 * And much more
 
 <p align="center">
-  <img src="src/assets/images/readme/full-chat-preview.png" alt="Angular 2 RxJS Chat" width="800" height="577"/>
+  <img src="src/assets/images/readme/full-chat-preview.png" alt="Angular RxJS Chat" width="800" height="577"/>
 </p>
 
-> Try the live [demo here](http://rxjs.ng-book.com)
+## Updated to Angular 10.1
+
+This is just an updated version of the following repo:
+`https://github.com/ng-book/angular2-rxjs-chat`
+
+Please buy their book if you like to learn how this app works.
 
 ## Quick start
 
 ```bash
 # clone the repo
-git clone https://github.com/ng-book/angular2-rxjs-chat.git
+git clone https://github.com/thorstenhirsch/angular-rxjs-chat.git
 
 # change into the repo directory
-cd angular2-rxjs-chat
+cd angular-rxjs-chat
 
 # install
 npm install
@@ -62,7 +67,7 @@ There are also three top-level components:
 * [`ChatWindow`](src/app/chat-window/chat-window.component.ts) - where we hold our current conversation
 
 <p align="center">
-  <img src="src/assets/images/readme/rx-chat-top-level-components.png" alt="Angular 2 RxJS Chat" width="500" height="360"/>
+  <img src="src/assets/images/readme/rx-chat-top-level-components.png" alt="Angular RxJS Chat" width="500" height="360"/>
 </p>
 
 ## Services Manage Observables
@@ -87,7 +92,7 @@ This app implements a few simple chat bots. For instance:
 * Reversing bot
 * Waiting bot
 
-<img src="src/assets/images/readme/rx-chat-echo-bot.png" alt="Angular 2 RxJS Chat Bots" width="346" height="348"/>
+<img src="src/assets/images/readme/rx-chat-echo-bot.png" alt="Angular RxJS Chat Bots" width="346" height="348"/>
 
 <div style="clear:both"></div>
 
@@ -132,11 +137,11 @@ There are two big changes we plan to make to this repo:
 
 Currently the bots are all client-side and there are no HTTP requests involved in the chats.
 
-We will move the chat bots to a server and integrate API requests into this project once the Angular 2 HTTP client development has settled down.
+We will move the chat bots to a server and integrate API requests into this project once the Angular HTTP client development has settled down.
 
 ### 2. `ON_PUSH` change detection
 
-Because we're using observables, we can improve the performance of these components by using `ON_PUSH` change detection. Again, once Angular 2 development stabilizes, we'll be making this change.
+Because we're using observables, we can improve the performance of these components by using `ON_PUSH` change detection. Again, once Angular development stabilizes, we'll be making this change.
 
 ## Contributing
 
@@ -147,24 +152,6 @@ There are lots of other little things that need cleaned up such as:
 - Simplifying the unread messages count
 
 If you'd like to contribute, feel free to submit a pull request and we'll likely merge it in.
-
-## Getting Help
-
-If you're having trouble getting this project running, feel free to [open an issue](https://github.com/ng-book/angular2-rxjs-chat/issues), join us on [Gitter](https://gitter.im/ng-book/ng-book?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge), or [email us](mailto:us@fullstack.io)!
-
-___
-
-# ng-book 2
-
-<a href="https://ng-book.com/2">
-<img align="right" src="src/assets/images/readme/ng-book-2-as-book-cover-pigment.png" alt="ng-book 2" width="148" height="250" />
-</a>
-
-This repo was written and is maintained by the [ng-book 2](https://ng-book.com/2) team. In the book we talk about each line of code in this app and explain why it's there and how it works.
-
-This app is only one of several apps we have in the book. If you're looking to learn Angular 2, there's no faster way than by spending a few hours with ng-book 2.
-
-<div style="clear:both"></div>
 
 ## License
  [MIT](/LICENSE.md)
